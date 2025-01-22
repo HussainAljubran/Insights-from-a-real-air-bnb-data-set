@@ -21,3 +21,6 @@ Explanation value_counts(normalize=True) give proportion. Multiplaying by 100 co
 availability_percentage = calendar['available'].value_counts(normalize=True) * 100
 availability_percentage
 ```
+<img width="439" alt="image" src="https://github.com/user-attachments/assets/1b037fef-de38-408d-b111-6ff580538c48" />
+
+

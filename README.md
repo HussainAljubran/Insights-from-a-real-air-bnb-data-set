@@ -100,6 +100,35 @@ plt.show()
 ```
 <img width="607" alt="image" src="https://github.com/user-attachments/assets/a4be621d-9587-4c6e-96b8-940391119ed6" />
 
+## ✅ What is the distribution of the room types (Private room, Entire home/apt) in the listings data?
+```diff
+room_type_counts = listings['room_type'].value_counts()
+labels = room_type_counts.index
+sizes = room_type_counts.values
+
+plt.figure(figsize=(8, 6))
+plt.pie(sizes, labels=labels, autopct='%1.1f%%', startangle=30)
+plt.axis('equal')
+plt.title('Distribution of Room Types')
+plt.show()
+```
+<img width="609" alt="image" src="https://github.com/user-attachments/assets/f453f772-d8f9-43a2-8915-fce12a63f0c3" />
+
+## ✅ How does the price vary across different neighborhoods?
+```diff
+neighborhood_prices = listings.groupby('neighbourhood')['price'].mean().sort_values().head(15)
+
+plt.figure(figsize=(12, 8))
+neighborhood_prices.plot(kind='bar', color='skyblue')
+plt.xlabel('Neighborhoods')
+plt.ylabel('Average Price')
+plt.title('Average Price by Neighborhood')
+plt.xticks(rotation=45)
+plt.tight_layout()
+plt.show()
+```
+<img width="826" alt="image" src="https://github.com/user-attachments/assets/49dfc75e-75d1-476c-8a37-9b256ec7d92d" />
+
 ## ✅ Geographical Distribution of Listings (Price Colored)
 ``` diff
 import matplotlib.pyplot as plt

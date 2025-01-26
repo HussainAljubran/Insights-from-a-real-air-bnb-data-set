@@ -5,7 +5,7 @@ python analysis using calendar and listing dataset of Manchester
 import pandas as pd
 calendar=pd.read_csv("calendar.csv")
 ```
-## 1 want to know the number of available and unavailable rooms
+## I want to know the number of available and unavailable rooms
 ``` diff
 calendar.available.value_counts()
 ```
